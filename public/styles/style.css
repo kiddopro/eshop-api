@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+  "nav nav nav"
+  "aside main main"
+  "footer footer footer";
+  grid-template-rows: 50px 1fr 80px;
+  grid-template-columns: minmax(100px, 300px) minmax(250px,1fr);
+  color: #fff;
+  font-weight: 200;
+}
+
+#page > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: clamp(10px,1rem,1.5rem);
+  grid-area: nav;
+  background-color: #1f9cb4;
+}
+
+#page > nav > ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#page > nav > ul > li {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#page > aside {
+  display: flex;
+  justify-content: center;
+  grid-area: aside;
+  background-color: #b6d6e6;
+}
+
+#page > aside > ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+#page > aside > ul > li {
+  font-size: clamp(15px,0.8rem,1.2rem);
+  cursor: pointer;
+}
+
+#page > main {
+  grid-area: main;
+  background-color: #deebf6;
+}
+
+#page > footer {
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: footer;
+  background-color: #1f9cb4;
+}
