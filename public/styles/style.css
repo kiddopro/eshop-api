@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 #page {
@@ -13,26 +14,30 @@
   "main main main"
   "footer footer footer";
   grid-template-rows: 50px 1fr 80px;
-  grid-template-columns: minmax(100px, 250px) minmax(300px,1fr);
+  grid-template-columns: minmax(100px, 300px) 1fr;
   color: #fff;
   font-weight: 200;
 }
 
 #page > nav {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
   font-size: clamp(10px,1rem,1.5rem);
   grid-area: nav;
-  background-color: #1f9cb4;
+  background-color: #1F9CB5;
 }
 
 #page > nav > ul {
   display: flex;
+  width: 100%;
   list-style: none;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
 }
 
 #page > nav > ul > li {
@@ -40,7 +45,16 @@
   cursor: pointer;
 }
 
-#page > aside {
+#page > nav > ul > li:nth-child(1) {
+  color: #1f9cb4;
+}
+
+#page > nav > ul > li:nth-child(2) {
+  font-weight: 600;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* #page > aside {
   display: flex;
   justify-content: center;
   grid-area: aside;
@@ -62,17 +76,17 @@
 #page > aside > ul > li > a {
   text-decoration: none;
   color: #fff;
-}
+} */
 
 #page > main {
   grid-area: main;
-  background-color: #deebf6;
+  background-color: #243336;
 }
 
 #page > main > section > h2 {
-  margin: 20px 0 20px 20px;
+  margin-left: 20px;
   font-size: clamp(20px,1.5rem,3rem);
-  color: #F6E9DE;
+  color: #FFFFFF;
   text-shadow: 1px 1px 2px black;
 }
 
@@ -82,19 +96,23 @@
   align-items: center;
   justify-content: center;
   grid-area: footer;
-  background-color: #1f9cb4;
+  background-color: #316A75;
+}
+
+#why > p {
+  margin: 20px;
+  text-align: justify;
 }
 
 #endpoint > div.uri {
-  width: fit-content;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
+  background-color: #316A75;
   border-radius: 20px;
-  margin-left: 20px;
+  margin: 10px 20px;
+  padding: 13px;
 }
 
-#endpoint > div > p {
-  padding: 12px;
-  color: #000;
-  font-weight: 600;
-  text-indent: 10px;
+#endpoint > div.response {
+  background-color: #316A75;
+  margin: 40px 20px;
 }

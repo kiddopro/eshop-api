@@ -2,7 +2,7 @@
   <html>
     <head>
       <meta charset="UTF-8" />
-      <title>Welcome</title> 
+      <title>EShop API</title> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <meta name="description" content="homepage" />
@@ -21,7 +21,7 @@
       <div id="page">
         <nav>
           <ul>
-            <li></li>
+            <li>extras</li>
             <li>EShop API</li>
             <li>About</li>
           </ul>
@@ -37,42 +37,97 @@
         </aside> -->
         <main>
           <section id="introduction">
-            <h2>Welcome</h1>
+            <h2>Welcome.</h1>
             <p>Hello guys and thanks for visiting us</p>
             <p></p>
           </section>
           <section id="why">
-            <h2>Why</h2>
+            <h2>Why.</h2>
+            <p>
+              Well, it's just a simple API. Thats a fact.
+              But the thing is, it's not that simple.
+              This API is made for those devs that just want to practice.
+              We all know that the first thing that we do as a programer is a e-commerce webpage.
+              Matter of fact, this API is my project for practice too.
+            </p>
           </section>
           <section id="endpoint">
-            <h2>Endpoint</h2>
+            <h2>Endpoint.</h2>
             <div class="uri">
-              <p>https://.../products</p>
+              GET /api/products
             </div>
             <div class="response">
-              aca va la response
+              <pre>
+                <code>
+                  {
+                    man: {},
+                    woman: {},
+                  }
+                </code>
+              </pre>
             </div>
             <div class="uri">
-              <p>https://.../products/man</p>
+              GET /api/products/man
             </div>
             <div class="response">
-              aca va la respuesta
+              <pre>
+                <code>
+                  {
+                    watch: [
+                      {
+                        id: 1,
+                        title: "",
+                        desc: "",
+                        img: ["", ..],
+                        price: 0,
+                        vat: 0,
+                        rate: 0,
+                        stock: 0,
+                        comments: [
+                          {
+                            id: 1,
+                            user: "",
+                            email: "",
+                            photo: "",
+                            comment: "",
+                          },
+                          ..
+                        ]
+                      },
+                      ..
+                    ],
+                    shirt: {},
+                    shoes: {},
+                    ring: {},
+                    ..
+                  }
+                </code>
+              </pre>
             </div>
             <div class="uri">
-              <p>https://.../products/woman</p>
+              GET /api/products/woman
             </div>
             <div class="response">
-              aca va la respuesta
+              <pre>
+                <code>
+                  {
+                    watch: {},
+                    shirt: {},
+                    shoes: {},
+                    ..
+                  }
+                </code>
+              </pre>
             </div>
           </section>
           <section id="return">
-            <h2>Return</h2>
+            <h2>Return.</h2>
           </section>
           <section id="thanks">
-            <h2>Thanks</h2>
+            <h2>Thanks.</h2>
           </section>
         </main>
-        <footer>@Todos los derechos reservados</footer>
+        <footer>Made with ❤️ by kiddopro</footer>
       </div>
     </body>
   </html>
