@@ -54,7 +54,7 @@
           <section id="endpoint">
             <h2>Endpoint.</h2>
             <div class="uri">
-              GET /api/products
+              GET <b>/api/products</b>
             </div>
             <div class="response">
               <pre>
@@ -67,7 +67,7 @@
               </pre>
             </div>
             <div class="uri">
-              GET /api/products/man
+              GET <b>/api/products/man</b>
             </div>
             <div class="response">
               <pre>
@@ -87,12 +87,13 @@
                           {
                             id: 1,
                             user: "",
+                            fullname: "",
                             email: "",
                             photo: "",
                             comment: "",
                           },
                           ..
-                        ]
+                        ],
                       },
                       ..
                     ],
@@ -105,15 +106,39 @@
               </pre>
             </div>
             <div class="uri">
-              GET /api/products/woman
+              GET <b>/api/products/woman</b>
             </div>
             <div class="response">
               <pre>
                 <code>
                   {
-                    watch: {},
+                    watch: [
+                      {
+                        id: 1,
+                        title: "",
+                        desc: "",
+                        img: ["", ..],
+                        price: 0,
+                        vat: 0,
+                        rate: 0,
+                        stock: 0,
+                        comments: [
+                          {
+                            id: 1,
+                            user: "",
+                            fullname: "",
+                            email: "",
+                            photo: "",
+                            comment: "",
+                          },
+                          ..
+                        ],
+                      },
+                      ..
+                    ],
                     shirt: {},
                     shoes: {},
+                    ring: {},
                     ..
                   }
                 </code>
