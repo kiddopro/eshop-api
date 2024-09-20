@@ -1,5 +1,14 @@
+:root {
+  --nav-bg: #00C2E0;
+  --main-bg: #243436;
+  --footer-bg: #1EA2B6;
+  --text: #FFFFFF;
+  --uri-bg: #305A61;
+}
+
 * {
   font-family: "Roboto Slab", sans-serif;
+  color: var(--text);
 }
 
 html, body, div, span, applet, object, iframe,
@@ -15,44 +24,113 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
-
 body {
-  line-height: 1;
+	line-height: 1;
 }
-
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
-
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
-
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-} 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* aca va los estilos */
+
+@media (max-width: 768px) {
+  #page {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr;
+  }
+
+  #page nav {
+    background-color: var(--nav-bg);
+  }
+
+  #page nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100%;
+  }
+
+  #page nav ul li {
+  }
+
+  #page nav ul li:nth-child(1) {
+    color: var(--nav-bg);
+  }
+
+  #page nav ul li:nth-child(2) {
+    font-weight: bold;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  #page main {
+    background-color: var(--main-bg);
+  }
+
+  #page main section, div.uri, pre {
+    margin: 20px;
+  }
+
+  #page main section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-shadow: 1px 1px 2px black;
+  }
+
+  #page main section p {
+    margin-top: 30px;
+  }
+
+  #page main section div.uri {
+    background-color: var(--uri-bg);
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  #page main section pre {
+    background-color: var(--uri-bg);
+  }
+
+  #page footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-bg);
+    text-align: center;
+  }
+
 }
