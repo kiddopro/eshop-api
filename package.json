@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "This simple project provides products to your e-commerce template",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.0"
   }
 }
